@@ -1,0 +1,126 @@
+{
+  "trip_id": "2c313fba-c96b-4a67-ac3f-44612a2bc18d",
+  "driver_id": null,
+  "created_at": "2026-04-28T17:38:12.073972Z",
+  "closed_at": "2026-04-28T17:50:51.205885Z",
+  "status": "closed",
+  "origin": {
+    "name": "B&G HQ",
+    "coordinates": {
+      "latitude": 21.866524851449594,
+      "longitude": -102.29917786411745
+    }
+  },
+  "return_mode": "origin",
+  "return_point": null,
+  "current_location": {
+    "latitude": 21.86617485345394,
+    "longitude": -102.29278353331041
+  },
+  "route_plan": {
+    "optimized_order": [
+      "bfa9225f-f9ba-46ce-bf1f-0843e49e2064",
+      "3554fde3-8c92-4e98-8a5c-dc7beebfbbe8",
+      "685eb071-fe4a-4b73-b305-f383a0c46748",
+      "db7079e2-f8de-4574-8326-3feb570c1371",
+      "c6ad3b0a-16ff-4ff2-a4a1-2f032c46c256"
+    ],
+    "total_distance_km": 41.78,
+    "total_duration_min": 61.99,
+    "method": "osrm",
+    "return_info": {
+      "mode": "origin",
+      "point_name": "B&G HQ",
+      "latitude": 21.866524851449594,
+      "longitude": -102.29917786411745
+    }
+  },
+  "metrics": {
+    "planned_km": 41.78,
+    "actual_km": null,
+    "planned_duration_min": 61.99,
+    "estimated_fuel_liters": 3.8,
+    "estimated_fuel_cost": 113.19
+  },
+  "fuel_config": {
+    "km_per_liter": 11.0,
+    "fuel_price": 29.8
+  },
+  "deliveries": [
+    {
+      "delivery_id": "db7079e2-f8de-4574-8326-3feb570c1371",
+      "client_name": "Chichimeco",
+      "coordinates": {
+        "latitude": 21.997099641330017,
+        "longitude": -102.36160833120002
+      },
+      "status": "delivered",
+      "note": "",
+      "reason": "",
+      "created_at": "2026-04-28T17:38:36.271781Z",
+      "updated_at": "2026-04-28T17:41:37.053237Z",
+      "completed_at": "2026-04-28T17:41:37.053237Z",
+      "sequence_hint": null
+    },
+    {
+      "delivery_id": "bfa9225f-f9ba-46ce-bf1f-0843e49e2064",
+      "client_name": "JM Centro",
+      "coordinates": {
+        "latitude": 21.96349588755972,
+        "longitude": -102.34303128010258
+      },
+      "status": "delivered",
+      "note": "",
+      "reason": "",
+      "created_at": "2026-04-28T17:39:04.512136Z",
+      "updated_at": "2026-04-28T17:42:12.413267Z",
+      "completed_at": "2026-04-28T17:42:12.413267Z",
+      "sequence_hint": null
+    },
+    {
+      "delivery_id": "3554fde3-8c92-4e98-8a5c-dc7beebfbbe8",
+      "client_name": "Altaria",
+      "coordinates": {
+        "latitude": 21.923811729048257,
+        "longitude": -102.28920761590953
+      },
+      "status": "delivered",
+      "note": "",
+      "reason": "",
+      "created_at": "2026-04-28T17:39:33.608584Z",
+      "updated_at": "2026-04-28T17:42:37.860727Z",
+      "completed_at": "2026-04-28T17:42:37.860727Z",
+      "sequence_hint": null
+    },
+    {
+      "delivery_id": "685eb071-fe4a-4b73-b305-f383a0c46748",
+      "client_name": "Star Medica",
+      "coordinates": {
+        "latitude": 21.897624931697692,
+        "longitude": -102.30441819178996
+      },
+      "status": "delivered",
+      "note": "",
+      "reason": "",
+      "created_at": "2026-04-28T17:40:03.267025Z",
+      "updated_at": "2026-04-28T17:43:08.699290Z",
+      "completed_at": "2026-04-28T17:43:08.699290Z",
+      "sequence_hint": null
+    },
+    {
+      "delivery_id": "c6ad3b0a-16ff-4ff2-a4a1-2f032c46c256",
+      "client_name": "Imss 1",
+      "coordinates": {
+        "latitude": 21.86617485345394,
+        "longitude": -102.29278353331041
+      },
+      "status": "delivered",
+      "note": "",
+      "reason": "",
+      "created_at": "2026-04-28T17:40:39.273206Z",
+      "updated_at": "2026-04-28T17:43:35.186652Z",
+      "completed_at": "2026-04-28T17:43:35.186652Z",
+      "sequence_hint": null
+    }
+  ]
+}

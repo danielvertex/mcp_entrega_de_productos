@@ -1,0 +1,94 @@
+{
+  "trip_id": "4039cc22-f252-4d92-9117-816baaac3851",
+  "driver_id": null,
+  "created_at": "2026-04-28T12:47:29.772784-06:00",
+  "closed_at": "2026-04-28T12:52:23.297314-06:00",
+  "status": "closed",
+  "origin": {
+    "name": "B&G HQ",
+    "coordinates": {
+      "latitude": 21.86584358420525,
+      "longitude": -102.29922539052505
+    }
+  },
+  "return_mode": "origin",
+  "return_point": null,
+  "current_location": {
+    "latitude": 21.88620333389224,
+    "longitude": -102.29379914795467
+  },
+  "route_plan": {
+    "optimized_order": [
+      "804836c6-07ba-48ba-86b5-de6e473767bf",
+      "fc09287d-d048-4e19-a90c-7914939bfd24",
+      "d7704520-c6c6-4bc5-90b7-2ccc0b29faf3"
+    ],
+    "total_distance_km": 31.81,
+    "total_duration_min": 41.23,
+    "method": "osrm",
+    "return_info": {
+      "mode": "origin",
+      "point_name": "B&G HQ",
+      "latitude": 21.86584358420525,
+      "longitude": -102.29922539052505
+    }
+  },
+  "metrics": {
+    "planned_km": 31.81,
+    "actual_km": null,
+    "planned_duration_min": 41.23,
+    "estimated_fuel_liters": 2.89,
+    "estimated_fuel_cost": 86.18
+  },
+  "fuel_config": {
+    "km_per_liter": 11.0,
+    "fuel_price": 29.8
+  },
+  "deliveries": [
+    {
+      "delivery_id": "fc09287d-d048-4e19-a90c-7914939bfd24",
+      "client_name": "JM Centro",
+      "coordinates": {
+        "latitude": 21.96401072639981,
+        "longitude": -102.34224164838234
+      },
+      "status": "delivered",
+      "note": "",
+      "reason": "",
+      "created_at": "2026-04-28T12:47:57.859226-06:00",
+      "updated_at": "2026-04-28T12:51:09.736792-06:00",
+      "completed_at": "2026-04-28T12:51:09.736792-06:00",
+      "sequence_hint": null
+    },
+    {
+      "delivery_id": "804836c6-07ba-48ba-86b5-de6e473767bf",
+      "client_name": "Altaria",
+      "coordinates": {
+        "latitude": 21.9245484073649,
+        "longitude": -102.28877907198932
+      },
+      "status": "delivered",
+      "note": "",
+      "reason": "",
+      "created_at": "2026-04-28T12:48:32.310221-06:00",
+      "updated_at": "2026-04-28T12:51:34.801913-06:00",
+      "completed_at": "2026-04-28T12:51:34.801913-06:00",
+      "sequence_hint": null
+    },
+    {
+      "delivery_id": "d7704520-c6c6-4bc5-90b7-2ccc0b29faf3",
+      "client_name": "Centro Ags",
+      "coordinates": {
+        "latitude": 21.88620333389224,
+        "longitude": -102.29379914795467
+      },
+      "status": "delivered",
+      "note": "",
+      "reason": "",
+      "created_at": "2026-04-28T12:49:28.357689-06:00",
+      "updated_at": "2026-04-28T12:51:58.283933-06:00",
+      "completed_at": "2026-04-28T12:51:58.283933-06:00",
+      "sequence_hint": null
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "trip_id": "a4ffb5ed-ef47-4f0e-b575-11dadd12db7f",
+  "driver_id": null,
+  "created_at": "2026-04-27T20:38:16.846212Z",
+  "closed_at": "2026-04-28T15:57:23.635529Z",
+  "status": "closed",
+  "origin": {
+    "name": "B&G HQ",
+    "coordinates": {
+      "latitude": 21.86585354625109,
+      "longitude": -102.29715292031335
+    }
+  },
+  "return_mode": "custom",
+  "return_point": {
+    "name": "B&G HQ",
+    "coordinates": {
+      "latitude": 21.86585354625109,
+      "longitude": -102.29715292031335
+    }
+  },
+  "current_location": null,
+  "route_plan": {
+    "optimized_order": [
+      "27f90a87-d757-4f2a-913b-e1ace311e0dc",
+      "ba887c7d-a447-4b29-96d3-b750185f837d"
+    ],
+    "total_distance_km": 10.37,
+    "total_duration_min": 13.69,
+    "method": "osrm",
+    "return_info": {
+      "mode": "custom",
+      "point_name": "B&G HQ",
+      "latitude": 21.86585354625109,
+      "longitude": -102.29715292031335
+    }
+  },
+  "metrics": {
+    "planned_km": 10.37,
+    "actual_km": null,
+    "planned_duration_min": 13.69,
+    "estimated_fuel_liters": 0.94,
+    "estimated_fuel_cost": 28.09
+  },
+  "fuel_config": {
+    "km_per_liter": 11.0,
+    "fuel_price": 29.8
+  },
+  "deliveries": []
+}

@@ -1,0 +1,78 @@
+{
+  "trip_id": "62958913-d20c-429d-afea-aef4c92014f6",
+  "driver_id": null,
+  "created_at": "2026-04-28T17:51:56.573960Z",
+  "closed_at": "2026-04-28T17:55:39.531724Z",
+  "status": "closed",
+  "origin": {
+    "name": "B&G HQ",
+    "coordinates": {
+      "latitude": 21.866690757471936,
+      "longitude": -102.29924794925387
+    }
+  },
+  "return_mode": "origin",
+  "return_point": null,
+  "current_location": {
+    "latitude": 21.87925635187043,
+    "longitude": -102.28933390107858
+  },
+  "route_plan": {
+    "optimized_order": [
+      "a325d729-abde-479a-9940-2407768505cc",
+      "b7ab9cba-b07d-45e9-acac-205618613a31"
+    ],
+    "total_distance_km": 5.37,
+    "total_duration_min": 7.75,
+    "method": "osrm",
+    "return_info": {
+      "mode": "origin",
+      "point_name": "B&G HQ",
+      "latitude": 21.866690757471936,
+      "longitude": -102.29924794925387
+    }
+  },
+  "metrics": {
+    "planned_km": 5.37,
+    "actual_km": null,
+    "planned_duration_min": 7.75,
+    "estimated_fuel_liters": 0.49,
+    "estimated_fuel_cost": 14.55
+  },
+  "fuel_config": {
+    "km_per_liter": 11.0,
+    "fuel_price": 29.8
+  },
+  "deliveries": [
+    {
+      "delivery_id": "a325d729-abde-479a-9940-2407768505cc",
+      "client_name": "lejos",
+      "coordinates": {
+        "latitude": 21.866690757471936,
+        "longitude": -102.29924794925387
+      },
+      "status": "delivered",
+      "note": "",
+      "reason": "",
+      "created_at": "2026-04-28T17:54:02.786764Z",
+      "updated_at": "2026-04-28T17:55:13.481021Z",
+      "completed_at": "2026-04-28T17:55:13.481021Z",
+      "sequence_hint": null
+    },
+    {
+      "delivery_id": "b7ab9cba-b07d-45e9-acac-205618613a31",
+      "client_name": "Cerca",
+      "coordinates": {
+        "latitude": 21.87925635187043,
+        "longitude": -102.28933390107858
+      },
+      "status": "delivered",
+      "note": "",
+      "reason": "",
+      "created_at": "2026-04-28T17:54:28.340262Z",
+      "updated_at": "2026-04-28T17:55:26.753559Z",
+      "completed_at": "2026-04-28T17:55:26.753559Z",
+      "sequence_hint": null
+    }
+  ]
+}

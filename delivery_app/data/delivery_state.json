@@ -9,11 +9,25 @@
     "optimized_order": [],
     "total_distance_km": 0.0,
     "total_duration_min": 0.0,
-    "method": ""
+    "method": "",
+    "return_info": {
+      "mode": "none",
+      "point_name": "",
+      "latitude": 0.0,
+      "longitude": 0.0
+    }
+  },
+  "return_config": {
+    "mode": "origin",
+    "custom_point": {
+      "name": "",
+      "latitude": 0.0,
+      "longitude": 0.0
+    }
   },
   "fuel_config": {
     "km_per_liter": 5.0,
-    "price_per_liter": 29.8
+    "price_per_liter": 29.5
   },
   "summary": {
     "completed": 0,

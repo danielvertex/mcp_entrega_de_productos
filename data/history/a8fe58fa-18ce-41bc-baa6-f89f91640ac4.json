@@ -1,0 +1,107 @@
+{
+  "trip_id": "a8fe58fa-18ce-41bc-baa6-f89f91640ac4",
+  "driver_id": null,
+  "created_at": "2026-04-28T18:22:15.059091Z",
+  "closed_at": "2026-04-28T18:28:26.368532Z",
+  "status": "closed",
+  "origin": {
+    "name": "B&G HQ",
+    "coordinates": {
+      "latitude": 21.866873334600083,
+      "longitude": -102.29864414029296
+    }
+  },
+  "return_mode": "origin",
+  "return_point": null,
+  "current_location": {
+    "latitude": 21.975518685905953,
+    "longitude": -102.3528505369872
+  },
+  "route_plan": {
+    "optimized_order": [
+      "2536181f-16d3-4b4a-b800-5ee7f98ca5be",
+      "adbb90c7-a061-4dc4-99d8-bd05444a5a64",
+      "99be6546-455d-4608-bdc6-31e9475e26c0",
+      "24cadc4a-d0ae-4a1b-8496-455e6c06167b"
+    ],
+    "total_distance_km": 33.69,
+    "total_duration_min": 41.5,
+    "method": "osrm",
+    "return_info": {
+      "mode": "origin",
+      "point_name": "B&G HQ",
+      "latitude": 21.866873334600083,
+      "longitude": -102.29864414029296
+    }
+  },
+  "metrics": {
+    "planned_km": 33.69,
+    "actual_km": null,
+    "planned_duration_min": 41.5,
+    "estimated_fuel_liters": 0.0,
+    "estimated_fuel_cost": 0.0
+  },
+  "fuel_config": null,
+  "deliveries": [
+    {
+      "delivery_id": "99be6546-455d-4608-bdc6-31e9475e26c0",
+      "client_name": "Lejos",
+      "coordinates": {
+        "latitude": 21.916410765100665,
+        "longitude": -102.31338641513992
+      },
+      "status": "delivered",
+      "note": "",
+      "reason": "",
+      "created_at": "2026-04-28T18:22:51.626085Z",
+      "updated_at": "2026-04-28T18:25:16.811840Z",
+      "completed_at": "2026-04-28T18:25:16.811840Z",
+      "sequence_hint": null
+    },
+    {
+      "delivery_id": "adbb90c7-a061-4dc4-99d8-bd05444a5a64",
+      "client_name": "Star Medica",
+      "coordinates": {
+        "latitude": 21.89763970226166,
+        "longitude": -102.30257418918642
+      },
+      "status": "delivered",
+      "note": "",
+      "reason": "",
+      "created_at": "2026-04-28T18:23:20.365865Z",
+      "updated_at": "2026-04-28T18:27:15.155031Z",
+      "completed_at": "2026-04-28T18:27:15.155031Z",
+      "sequence_hint": null
+    },
+    {
+      "delivery_id": "2536181f-16d3-4b4a-b800-5ee7f98ca5be",
+      "client_name": "Museo",
+      "coordinates": {
+        "latitude": 21.875464290392774,
+        "longitude": -102.29219981583248
+      },
+      "status": "delivered",
+      "note": "",
+      "reason": "",
+      "created_at": "2026-04-28T18:23:46.626302Z",
+      "updated_at": "2026-04-28T18:26:50.391121Z",
+      "completed_at": "2026-04-28T18:26:50.391121Z",
+      "sequence_hint": null
+    },
+    {
+      "delivery_id": "24cadc4a-d0ae-4a1b-8496-455e6c06167b",
+      "client_name": "JM",
+      "coordinates": {
+        "latitude": 21.975518685905953,
+        "longitude": -102.3528505369872
+      },
+      "status": "delivered",
+      "note": "",
+      "reason": "",
+      "created_at": "2026-04-28T18:24:14.975695Z",
+      "updated_at": "2026-04-28T18:28:02.393322Z",
+      "completed_at": "2026-04-28T18:28:02.393322Z",
+      "sequence_hint": null
+    }
+  ]
+}

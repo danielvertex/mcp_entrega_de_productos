@@ -29,6 +29,20 @@ DEFAULT_STATE: dict[str, Any] = {
         "total_distance_km": 0.0,
         "total_duration_min": 0.0,
         "method": "",
+        "return_info": {
+            "mode": "none",
+            "point_name": "",
+            "latitude": 0.0,
+            "longitude": 0.0,
+        },
+    },
+    "return_config": {
+        "mode": "origin",
+        "custom_point": {
+            "name": "",
+            "latitude": 0.0,
+            "longitude": 0.0,
+        },
     },
     "fuel_config": {
         "km_per_liter": 0.0,

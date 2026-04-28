@@ -1,0 +1,78 @@
+{
+  "trip_id": "b5e790fa-814c-4c8c-a48b-b8886dea8f6d",
+  "driver_id": null,
+  "created_at": "2026-04-28T18:30:20.657695Z",
+  "closed_at": "2026-04-28T18:34:11.294594Z",
+  "status": "closed",
+  "origin": {
+    "name": "B&G HQ",
+    "coordinates": {
+      "latitude": 21.86593426747532,
+      "longitude": -102.29908181268755
+    }
+  },
+  "return_mode": "origin",
+  "return_point": null,
+  "current_location": {
+    "latitude": 21.934636332886072,
+    "longitude": -102.30515572756319
+  },
+  "route_plan": {
+    "optimized_order": [
+      "74cb514f-cdf9-4f50-b738-27dc46f26a09",
+      "b3e1e929-2b3f-48a7-bff2-a7d5ab4cbb9d"
+    ],
+    "total_distance_km": 24.18,
+    "total_duration_min": 31.04,
+    "method": "osrm",
+    "return_info": {
+      "mode": "origin",
+      "point_name": "B&G HQ",
+      "latitude": 21.86593426747532,
+      "longitude": -102.29908181268755
+    }
+  },
+  "metrics": {
+    "planned_km": 24.18,
+    "actual_km": null,
+    "planned_duration_min": 31.04,
+    "estimated_fuel_liters": 2.2,
+    "estimated_fuel_cost": 65.51
+  },
+  "fuel_config": {
+    "km_per_liter": 11.0,
+    "fuel_price": 29.8
+  },
+  "deliveries": [
+    {
+      "delivery_id": "74cb514f-cdf9-4f50-b738-27dc46f26a09",
+      "client_name": "Corral de Barrancos",
+      "coordinates": {
+        "latitude": 21.94615282828039,
+        "longitude": -102.32854055662023
+      },
+      "status": "delivered",
+      "note": "",
+      "reason": "",
+      "created_at": "2026-04-28T18:31:16.656395Z",
+      "updated_at": "2026-04-28T18:33:12.896336Z",
+      "completed_at": "2026-04-28T18:33:12.896336Z",
+      "sequence_hint": null
+    },
+    {
+      "delivery_id": "b3e1e929-2b3f-48a7-bff2-a7d5ab4cbb9d",
+      "client_name": "San Telmo",
+      "coordinates": {
+        "latitude": 21.934636332886072,
+        "longitude": -102.30515572756319
+      },
+      "status": "delivered",
+      "note": "",
+      "reason": "",
+      "created_at": "2026-04-28T18:31:41.869024Z",
+      "updated_at": "2026-04-28T18:33:37.230943Z",
+      "completed_at": "2026-04-28T18:33:37.230943Z",
+      "sequence_hint": null
+    }
+  ]
+}
