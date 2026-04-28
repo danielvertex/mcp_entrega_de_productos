@@ -2,10 +2,18 @@
 
 Monta la FastMCPApp como provider y expone el endpoint /health.
 """
+import sys
+from pathlib import Path
+
+# Asegurar que el directorio padre esté en sys.path
+# (necesario para fastmcp dev inspector)
+_parent = str(Path(__file__).resolve().parent.parent)
+if _parent not in sys.path:
+    sys.path.insert(0, _parent)
 
 from fastmcp import FastMCP
 
-from .app import app
+from delivery_app.app import app
 
 mcp = FastMCP("Delivery Server", providers=[app])
 
@@ -19,4 +27,4 @@ async def health(request):
 
 
 if __name__ == "__main__":
-    mcp.run(transport="http", host="0.0.0.0", port=8000)
+    mcp.run()

@@ -1,0 +1,7 @@
+{
+  "name": "Delivery Server",
+  "server": "delivery_app/server.py:mcp",
+  "with_editable": [
+    "delivery_app"
+  ]
+}

@@ -15,17 +15,13 @@ class DeliveryPointInput(BaseModel):
         min_length=1,
         description="Nombre del negocio o persona",
     )
-    latitude: float = Field(
+    latitude: str = Field(
         title="Latitud",
-        ge=-90,
-        le=90,
-        description="Coordenada de latitud",
+        description="Coordenada de latitud (ej: -34.6037)",
     )
-    longitude: float = Field(
+    longitude: str = Field(
         title="Longitud",
-        ge=-180,
-        le=180,
-        description="Coordenada de longitud",
+        description="Coordenada de longitud (ej: -58.3816)",
     )
 
 
@@ -37,31 +33,24 @@ class OriginInput(BaseModel):
         min_length=1,
         description="Ej: Bodega Central, Almacén Norte",
     )
-    latitude: float = Field(
+    latitude: str = Field(
         title="Latitud",
-        ge=-90,
-        le=90,
-        description="Coordenada de latitud del punto de salida",
+        description="Coordenada de latitud del punto de salida (ej: -34.6037)",
     )
-    longitude: float = Field(
+    longitude: str = Field(
         title="Longitud",
-        ge=-180,
-        le=180,
-        description="Coordenada de longitud del punto de salida",
+        description="Coordenada de longitud del punto de salida (ej: -58.3816)",
     )
 
 
 class FuelConfigInput(BaseModel):
     """Datos para configurar el rendimiento y precio de combustible."""
 
-    km_per_liter: float = Field(
+    km_per_liter: str = Field(
         title="Rendimiento (km/litro)",
-        gt=0,
-        le=100,
-        description="Kilómetros por litro del vehículo",
+        description="Kilómetros por litro del vehículo (ej: 12.5)",
     )
-    price_per_liter: float = Field(
+    price_per_liter: str = Field(
         title="Precio por Litro ($)",
-        gt=0,
-        description="Precio actual del combustible por litro",
+        description="Precio actual del combustible por litro (ej: 23.50)",
     )

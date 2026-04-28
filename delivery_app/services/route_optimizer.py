@@ -153,16 +153,9 @@ async def optimize_with_osrm(
         # pero debemos excluir el origen (primer coordenada)
 
         ordered_points: list[dict[str, Any]] = []
-        # Los waypoints vienen en el orden de visita del trip
-        for wp in waypoints:
-            original_idx = wp.get("waypoint_index", 0)
-            # El índice 0 es el origen, los demás son puntos
-            # Pero waypoint_index se refiere al orden en la URL original
-            # Así que wp index 0 = origin, 1..n = points[0..n-1]
-            pass
-
-        # Enfoque más simple: waypoints están en orden de visita,
-        # y su "waypoint_index" nos dice cuál coordenada original es.
+        # Los waypoints están en orden de visita.
+        # "waypoint_index" indica cuál coordenada original es:
+        # index 0 = origin, 1..n = points[0..n-1]
         for wp in waypoints:
             orig_idx = wp["waypoint_index"]
             # Skip origin (index 0)

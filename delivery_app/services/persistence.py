@@ -6,6 +6,7 @@ de viajes cerrados (history/{fecha}.json).
 
 from __future__ import annotations
 
+import copy
 import json
 import shutil
 from datetime import date
@@ -55,20 +56,23 @@ def load_state() -> dict[str, Any]:
     """Carga el estado desde JSON. Si no existe o está corrupto, retorna default."""
     _ensure_dirs()
     if not STATE_FILE.exists():
-        save_state(DEFAULT_STATE.copy())
-        return DEFAULT_STATE.copy()
+        default = copy.deepcopy(DEFAULT_STATE)
+        save_state(default)
+        return default
 
     try:
         data = json.loads(STATE_FILE.read_text(encoding="utf-8"))
-        # Merge con default para cubrir campos nuevos que se agreguen
-        merged = {**DEFAULT_STATE, **data}
+        # Deep-merge: start from a fresh default copy, overlay loaded data
+        merged = copy.deepcopy(DEFAULT_STATE)
+        merged.update(data)
         return merged
     except (json.JSONDecodeError, ValueError):
         # Backup del archivo corrupto
         backup = STATE_FILE.with_suffix(".json.bak")
         shutil.copy2(STATE_FILE, backup)
-        save_state(DEFAULT_STATE.copy())
-        return DEFAULT_STATE.copy()
+        default = copy.deepcopy(DEFAULT_STATE)
+        save_state(default)
+        return default
 
 
 def save_state(state: dict[str, Any]) -> None:
@@ -94,10 +98,12 @@ def archive_day(state: dict[str, Any]) -> str:
     )
 
     # Limpiar estado activo: mantener origin y fuel_config
-    clean_state = DEFAULT_STATE.copy()
-    clean_state["origin"] = state.get("origin", DEFAULT_STATE["origin"])
-    clean_state["fuel_config"] = state.get(
-        "fuel_config", DEFAULT_STATE["fuel_config"]
+    clean_state = copy.deepcopy(DEFAULT_STATE)
+    clean_state["origin"] = copy.deepcopy(
+        state.get("origin", DEFAULT_STATE["origin"])
+    )
+    clean_state["fuel_config"] = copy.deepcopy(
+        state.get("fuel_config", DEFAULT_STATE["fuel_config"])
     )
     save_state(clean_state)
 
