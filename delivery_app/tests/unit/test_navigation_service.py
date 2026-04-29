@@ -136,3 +136,15 @@ class TestNavigationChain:
         assert nav.next_stop_name == "A"
         # Y el from debería ser B (el único entregado)
         assert nav.from_name == "B"
+
+    def test_navigation_from_failed_status(self):
+        """BUG-2: Navegar desde un punto que falló (CANCELLED)."""
+        trip, dA, dB, _ = _trip_with_deliveries()
+        # Marcar A como cancelado (en lugar de entregado)
+        trip = change_delivery_status(trip, dA.delivery_id, DeliveryStatus.CANCELLED)
+
+        nav = get_next_navigation(trip)
+        assert nav.has_next
+        # Debe navegar DESDE A (aunque falló) hacia B
+        assert nav.from_name == "A"
+        assert nav.next_stop_name == "B"

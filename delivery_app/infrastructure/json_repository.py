@@ -63,6 +63,11 @@ class TripRepositoryBase(ABC):
         """Lista resúmenes de jornadas archivadas, orden descendente."""
         ...
 
+    @abstractmethod
+    def clear_active(self) -> None:
+        """Elimina el estado activo (para después de archivar)."""
+        ...
+
 
 class JsonTripRepository(TripRepositoryBase):
     """Implementación de repositorio usando archivos JSON.
@@ -133,17 +138,28 @@ class JsonTripRepository(TripRepositoryBase):
     def load_archived_trip(self, trip_id: str) -> Trip | None:
         """Carga una jornada archivada por trip_id.
 
-        También soporta cargar por fecha (formato viejo YYYY-MM-DD).
+        También soporta cargar por fecha (formato viejo YYYY-MM-DD)
+        o coincidencias parciales en el nombre del archivo.
         """
-        # Intentar por trip_id primero
+        # Intentar por trip_id exacto primero
         archive_file = self._history_dir / f"{trip_id}.json"
         if archive_file.exists():
-            return self._load_trip_file(archive_file)
+            trip = self._load_trip_file(archive_file)
+            if trip:
+                return trip
+            # Si existe pero no es formato nuevo, intentar como legacy
+            return self._load_legacy_trip_file(archive_file)
 
-        # Fallback: buscar por fecha (compat con formato viejo)
-        date_file = self._history_dir / f"{trip_id}.json"
-        if date_file.exists():
-            return self._load_legacy_trip_file(date_file)
+        # Fallback: buscar en el directorio por coincidencia de nombre
+        # Útil si trip_id es una fecha o el archivo tiene prefijos/sufijos
+        for f in self._history_dir.glob("*.json"):
+            if trip_id in f.name:
+                # Intentar cargar como nuevo formato primero
+                trip = self._load_trip_file(f)
+                if trip:
+                    return trip
+                # Si falla, intentar como legacy
+                return self._load_legacy_trip_file(f)
 
         return None
 

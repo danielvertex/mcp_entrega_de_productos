@@ -40,13 +40,15 @@ def validate_coordinates(lat: float, lon: float) -> list[ValidationError]:
 
 
 def check_suspicious_swap(lat: float, lon: float) -> ValidationError | None:
-    """Detecta coordenadas posiblemente invertidas.
+    """Detecta coordenadas posiblemente invertidas o erróneas.
 
-    Heurística: si |lat| > 90 y |lon| <= 90, es probable que
-    el usuario haya intercambiado latitud y longitud.
+    Heurísticas:
+    1. Si |lat| > 90 y |lon| <= 90, es probable que se hayan intercambiado.
+    2. BUG-6: En el contexto de México, la longitud DEBE ser negativa.
+       Si lon > 0, es probable que falte el signo menos o estén invertidas.
 
     Returns:
-        ValidationError si se detecta inversión sospechosa, None en caso contrario.
+        ValidationError si se detecta anomalía sospechosa, None en caso contrario.
     """
     if abs(lat) > 90.0 and abs(lon) <= 90.0:
         return ValidationError(
@@ -54,6 +56,14 @@ def check_suspicious_swap(lat: float, lon: float) -> ValidationError | None:
             f"Coordenadas posiblemente invertidas: lat={lat}, lon={lon}. "
             f"¿Quisiste decir lat={lon}, lon={lat}?",
         )
+
+    if lon > 0:
+        return ValidationError(
+            "longitude",
+            f"Longitud positiva ({lon}) detectada. En México la longitud es negativa "
+            f"(aprox. -99 a -118). Revisa si falta el signo menos o están invertidas.",
+        )
+
     return None
 
 

@@ -87,6 +87,26 @@ class TestOSRMSuccess:
         call_kwargs = mock_client.trip.call_args
         assert call_kwargs.kwargs["roundtrip"] is True
 
+    @pytest.mark.asyncio
+    async def test_bug3_osrm_roundtrip_params(self):
+        """BUG-3: OSRM no acepta destination si roundtrip=True."""
+        mock_client = AsyncMock()
+        mock_client.trip.return_value = {
+            "code": "Ok", "trips": [{"distance": 100, "duration": 10}],
+            "waypoints": [{"waypoint_index": 0}]
+        }
+        service = RoutingService(osrm_client=mock_client)
+        await service.optimize(
+            origin=_origin(),
+            deliveries=_deliveries(),
+            return_mode=ReturnMode.ORIGIN,
+        )
+        # Verificar que destination es None cuando roundtrip es True
+        mock_client.trip.assert_called_once()
+        _, kwargs = mock_client.trip.call_args
+        assert kwargs["roundtrip"] is True
+        assert kwargs["destination"] is None
+
 
 class TestFallback:
     @pytest.mark.asyncio

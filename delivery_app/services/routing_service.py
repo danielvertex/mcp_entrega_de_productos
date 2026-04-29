@@ -115,7 +115,8 @@ class RoutingService:
         if return_mode == ReturnMode.ORIGIN:
             roundtrip = True
             source = "first"
-            destination: str | None = "last"
+            # BUG-3: OSRM Trip API no acepta 'destination' si 'roundtrip' es True.
+            destination = None
         elif return_mode == ReturnMode.CUSTOM:
             roundtrip = False
             source = "first"

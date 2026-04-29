@@ -1,0 +1,78 @@
+{
+  "trip_id": "486d826e-082b-42bd-a8ba-b9a37c467411",
+  "driver_id": null,
+  "created_at": "2026-04-29T01:43:41.783593-06:00",
+  "closed_at": "2026-04-29T01:47:22.286471-06:00",
+  "status": "closed",
+  "origin": {
+    "name": "b&g HQ",
+    "coordinates": {
+      "latitude": 21.866371903965263,
+      "longitude": -102.2991501442252
+    }
+  },
+  "return_mode": "origin",
+  "return_point": null,
+  "current_location": {
+    "latitude": 21.924604817324422,
+    "longitude": -102.28846158657328
+  },
+  "route_plan": {
+    "optimized_order": [
+      "83daf479-c8c1-4025-9a03-17c203e2251a",
+      "24eb11c9-781a-4887-80de-6f17642ff80c"
+    ],
+    "total_distance_km": 29.5,
+    "total_duration_min": 37.55,
+    "method": "osrm",
+    "return_info": {
+      "mode": "origin",
+      "point_name": "b&g HQ",
+      "latitude": 21.866371903965263,
+      "longitude": -102.2991501442252
+    }
+  },
+  "metrics": {
+    "planned_km": 29.5,
+    "actual_km": null,
+    "planned_duration_min": 37.55,
+    "estimated_fuel_liters": 2.68,
+    "estimated_fuel_cost": 79.92
+  },
+  "fuel_config": {
+    "km_per_liter": 11.0,
+    "fuel_price": 29.8
+  },
+  "deliveries": [
+    {
+      "delivery_id": "24eb11c9-781a-4887-80de-6f17642ff80c",
+      "client_name": "Centro Jesus Maria",
+      "coordinates": {
+        "latitude": 21.96248979032218,
+        "longitude": -102.34602283541034
+      },
+      "status": "delivered",
+      "note": "",
+      "reason": "",
+      "created_at": "2026-04-29T01:45:10.608331-06:00",
+      "updated_at": "2026-04-29T01:46:55.633704-06:00",
+      "completed_at": "2026-04-29T01:46:55.633704-06:00",
+      "sequence_hint": null
+    },
+    {
+      "delivery_id": "83daf479-c8c1-4025-9a03-17c203e2251a",
+      "client_name": "Gamers",
+      "coordinates": {
+        "latitude": 21.924604817324422,
+        "longitude": -102.28846158657328
+      },
+      "status": "delivered",
+      "note": "",
+      "reason": "",
+      "created_at": "2026-04-29T01:46:16.829475-06:00",
+      "updated_at": "2026-04-29T01:47:11.114760-06:00",
+      "completed_at": "2026-04-29T01:47:11.114760-06:00",
+      "sequence_hint": null
+    }
+  ]
+}

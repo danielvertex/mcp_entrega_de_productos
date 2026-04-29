@@ -140,6 +140,16 @@ class TestChangeDeliveryStatus:
         assert trip.current_location is not None
         assert trip.current_location.latitude == d.coordinates.latitude
 
+    def test_updates_current_location_on_failed_but_visited(self):
+        """BUG-4: Actualizar ubicación también si falló (pero se visitó)."""
+        trip = create_trip(origin=_origin())
+        d = _delivery()
+        trip = add_delivery(trip, d)
+        # Si se cancela, se asume que el conductor llegó al punto o estuvo cerca
+        trip = change_delivery_status(trip, d.delivery_id, DeliveryStatus.CANCELLED)
+        assert trip.current_location is not None
+        assert trip.current_location.latitude == d.coordinates.latitude
+
     def test_all_statuses_accepted(self):
         """Todos los DeliveryStatus deben ser asignables."""
         trip = create_trip(origin=_origin())
@@ -222,3 +232,22 @@ class TestHelpers:
         summary = get_summary(trip)
         assert summary["total"] == 0
         assert summary["trip_id"] == trip.trip_id
+
+    def test_summary_consistency_with_rescheduled(self):
+        """BUG-5: El resumen debe ser consistente con reprogramados."""
+        trip = create_trip(origin=_origin())
+        trip = add_delivery(trip, _delivery("A"))
+        trip = add_delivery(trip, _delivery("B"))
+
+        # Uno entregado, uno reprogramado
+        trip = change_delivery_status(trip, trip.deliveries[0].delivery_id, DeliveryStatus.DELIVERED)
+        trip = change_delivery_status(trip, trip.deliveries[1].delivery_id, DeliveryStatus.RESCHEDULED)
+
+        summary = get_summary(trip)
+        assert summary["total"] == 2
+        assert summary["completed"] == 1
+        assert summary["rescheduled"] == 1
+        assert summary["pending"] == 0
+        assert summary["failed"] == 0
+        # Invariante: total = comp + pend + failed + resched
+        assert summary["total"] == summary["completed"] + summary["pending"] + summary["failed"] + summary["rescheduled"]

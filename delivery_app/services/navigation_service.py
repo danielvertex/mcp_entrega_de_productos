@@ -71,7 +71,17 @@ def get_next_navigation(
     next_stop: Delivery | None = None
 
     for d in ordered_deliveries:
-        if d.status == DeliveryStatus.DELIVERED:
+        # BUG-2: Considerar todos los estados "visitados" como origen potencial
+        # para el siguiente tramo, no solo los entregados con éxito.
+        visited_states = {
+            DeliveryStatus.DELIVERED,
+            DeliveryStatus.NOT_FOUND,
+            DeliveryStatus.CANCELLED,
+            DeliveryStatus.REJECTED,
+            DeliveryStatus.RESCHEDULED,
+        }
+
+        if d.status in visited_states:
             last_delivered = d
         elif d.status == DeliveryStatus.PENDING and next_stop is None:
             next_stop = d

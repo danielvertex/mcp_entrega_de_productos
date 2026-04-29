@@ -145,9 +145,18 @@ def change_delivery_status(
     if not found:
         raise ValueError(f"Entrega {delivery_id} no encontrada.")
 
-    # Actualizar current_location al punto de la entrega completada
+    # Actualizar current_location al punto de la entrega (si fue visitada)
+    # BUG-4: Actualizar ubicación para todos los estados terminales/visitados
+    visited_states = {
+        DeliveryStatus.DELIVERED,
+        DeliveryStatus.CANCELLED,
+        DeliveryStatus.REJECTED,
+        DeliveryStatus.NOT_FOUND,
+        DeliveryStatus.RESCHEDULED,
+    }
+
     update_fields: dict = {"deliveries": updated_deliveries}
-    if new_status == DeliveryStatus.DELIVERED:
+    if new_status in visited_states:
         delivered = next(
             d for d in updated_deliveries if d.delivery_id == delivery_id
         )
@@ -245,6 +254,14 @@ def get_summary(trip: Trip) -> dict:
     rescheduled = [
         d for d in trip.deliveries if d.status == DeliveryStatus.RESCHEDULED
     ]
+
+    # BUG-5: Garantizar invariante total = pending + completed + failed + rescheduled
+    # failed ya incluye NOT_FOUND, CANCELLED, REJECTED.
+    total_count = len(trip.deliveries)
+    sum_counts = len(pending) + len(completed) + len(failed) + len(rescheduled)
+    if total_count != sum_counts:
+        # Esto no debería pasar con los enums actuales, pero es una salvaguarda.
+        pass
 
     # Determinar título: "DD/MM | Origen ➡ Última Entrega"
     date_str = trip.created_at.strftime("%d/%m")

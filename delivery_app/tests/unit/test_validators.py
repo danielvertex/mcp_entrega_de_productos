@@ -40,6 +40,13 @@ class TestCheckSuspiciousSwap:
         assert err is not None
         assert "invertidas" in err.message
 
+    def test_positive_longitude_mexico(self):
+        """BUG-6: Longitud positiva es sospechosa en México."""
+        err = check_suspicious_swap(21.86, 102.29)
+        assert err is not None
+        assert "longitud" in err.field
+        assert "negativa" in err.message
+
 
 class TestCheckBoundingBox:
     def test_within_radius(self):

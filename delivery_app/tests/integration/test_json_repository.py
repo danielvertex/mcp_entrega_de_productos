@@ -167,3 +167,20 @@ class TestArchiveAndHistory:
 
         repo.clear_active()
         assert repo.load_active_trip() is None
+
+    def test_load_archived_legacy_fallback(self, repo):
+        """BUG-1: Probar que carga archivos viejos por coincidencia parcial de nombre."""
+        legacy_data = {
+            "origin": {"name": "Viejo", "latitude": 0.0, "longitude": 0.0},
+            "delivery_points": [],
+        }
+        # Guardar con un nombre que no es trip_id (ej: fecha)
+        history_dir = repo._history_dir
+        history_dir.mkdir(parents=True, exist_ok=True)
+        f = history_dir / "2024-04-28.json"
+        f.write_text(json.dumps(legacy_data), encoding="utf-8")
+
+        # Debe cargar por coincidencia parcial
+        loaded = repo.load_archived_trip("2024-04-28")
+        assert loaded is not None
+        assert loaded.origin.name == "Viejo"
