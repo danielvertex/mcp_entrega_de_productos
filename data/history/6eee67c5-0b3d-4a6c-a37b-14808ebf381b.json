@@ -1,0 +1,64 @@
+{
+  "trip_id": "6eee67c5-0b3d-4a6c-a37b-14808ebf381b",
+  "driver_id": null,
+  "created_at": "2026-04-29T12:58:34.233124-06:00",
+  "closed_at": "2026-04-29T13:48:29.626351-06:00",
+  "status": "closed",
+  "origin": {
+    "name": "B&G",
+    "coordinates": {
+      "latitude": 21.961902567812366,
+      "longitude": -102.26867348309571
+    }
+  },
+  "return_mode": "origin",
+  "return_point": null,
+  "current_location": {
+    "latitude": 21.907371235291013,
+    "longitude": -102.26865481864795
+  },
+  "route_plan": null,
+  "metrics": {
+    "planned_km": 0.0,
+    "actual_km": null,
+    "planned_duration_min": 0.0,
+    "estimated_fuel_liters": 0.0,
+    "estimated_fuel_cost": 0.0
+  },
+  "fuel_config": {
+    "km_per_liter": 11.0,
+    "fuel_price": 29.8
+  },
+  "deliveries": [
+    {
+      "delivery_id": "cb9c7748-a9f1-4401-a27e-d280006f0f09",
+      "client_name": "P V",
+      "coordinates": {
+        "latitude": 21.961902567812366,
+        "longitude": -102.26867348309571
+      },
+      "status": "delivered",
+      "note": "",
+      "reason": "",
+      "created_at": "2026-04-29T12:58:44.171094-06:00",
+      "updated_at": "2026-04-29T12:59:36.958490-06:00",
+      "completed_at": "2026-04-29T12:59:36.958490-06:00",
+      "sequence_hint": null
+    },
+    {
+      "delivery_id": "18bf66b2-6967-41d1-8c8e-45e103e5f9cd",
+      "client_name": "2",
+      "coordinates": {
+        "latitude": 21.907371235291013,
+        "longitude": -102.26865481864795
+      },
+      "status": "delivered",
+      "note": "",
+      "reason": "",
+      "created_at": "2026-04-29T12:59:11.961354-06:00",
+      "updated_at": "2026-04-29T13:48:14.908710-06:00",
+      "completed_at": "2026-04-29T13:48:14.908710-06:00",
+      "sequence_hint": null
+    }
+  ]
+}

@@ -56,14 +56,22 @@ def get_next_navigation(
     if trip.route_plan:
         ordered_ids = trip.route_plan.optimized_order
 
-    # Construir lista ordenada con datos reales
+    # Construir lista ordenada: seguir el plan de ruta y agregar puntos nuevos al final
     ordered_deliveries: list[Delivery] = []
     if ordered_ids:
+        # 1. Puntos que están en el plan de ruta (en su orden optimizado)
         for did in ordered_ids:
             d = deliveries_by_id.get(did)
             if d:
                 ordered_deliveries.append(d)
+        
+        # 2. Puntos que NO están en el plan (agregados después de optimizar)
+        planned_ids = set(ordered_ids)
+        for d in trip.deliveries:
+            if d.delivery_id not in planned_ids:
+                ordered_deliveries.append(d)
     else:
+        # Sin plan de ruta, usar orden de creación
         ordered_deliveries = list(trip.deliveries)
 
     # Encontrar último entregado y siguiente pendiente en la secuencia
@@ -159,17 +167,27 @@ def _resolve_origin(
 
     # 2. current_location del trip (actualizado al completar entregas)
     if trip.current_location:
-        # Buscar el nombre del último entregado para display
+        # Intentar encontrar el nombre de la entrega que coincide con estas coordenadas
         name = "Última ubicación"
-        if last_delivered:
-            name = last_delivered.client_name
+        
+        # Buscar coincidencia exacta en coordenadas primero
+        for d in trip.deliveries:
+            if (abs(d.coordinates.latitude - trip.current_location.latitude) < 1e-7 and 
+                abs(d.coordinates.longitude - trip.current_location.longitude) < 1e-7):
+                name = d.client_name
+                break
+        else:
+            # Si no hay coincidencia exacta, fallback al nombre del último visitado en la secuencia
+            if last_delivered:
+                name = last_delivered.client_name
+                
         return (
             trip.current_location.latitude,
             trip.current_location.longitude,
             name,
         )
 
-    # 3. Último entregado (fallback si current_location no fue actualizado)
+    # 3. Último visitado según secuencia (fallback si current_location es None)
     if last_delivered:
         return (
             last_delivered.coordinates.latitude,
@@ -177,7 +195,7 @@ def _resolve_origin(
             last_delivered.client_name,
         )
 
-    # 4. Origen del trip
+    # 4. Origen del trip (bodega)
     return (
         trip.origin.coordinates.latitude,
         trip.origin.coordinates.longitude,

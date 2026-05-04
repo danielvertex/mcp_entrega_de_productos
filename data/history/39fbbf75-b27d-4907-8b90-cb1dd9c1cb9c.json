@@ -1,0 +1,75 @@
+{
+  "trip_id": "39fbbf75-b27d-4907-8b90-cb1dd9c1cb9c",
+  "driver_id": null,
+  "created_at": "2026-04-29T12:53:42.778262-06:00",
+  "closed_at": "2026-04-29T12:57:25.292628-06:00",
+  "status": "closed",
+  "origin": {
+    "name": "B&G",
+    "coordinates": {
+      "latitude": 21.86674172757952,
+      "longitude": -102.29927100601618
+    }
+  },
+  "return_mode": "origin",
+  "return_point": null,
+  "current_location": {
+    "latitude": 21.961902567812366,
+    "longitude": -102.26867348309571
+  },
+  "route_plan": {
+    "optimized_order": [
+      "3d53b870-0c23-4e1b-b92f-15a0d9ebe65d",
+      "fbe2076e-7948-4084-a017-2de11fb54ef7"
+    ],
+    "total_distance_km": 33.51,
+    "total_duration_min": 36.54,
+    "method": "osrm",
+    "return_info": {
+      "mode": "origin",
+      "point_name": "B&G",
+      "latitude": 21.86674172757952,
+      "longitude": -102.29927100601618
+    }
+  },
+  "metrics": {
+    "planned_km": 33.51,
+    "actual_km": null,
+    "planned_duration_min": 36.54,
+    "estimated_fuel_liters": 0.0,
+    "estimated_fuel_cost": 0.0
+  },
+  "fuel_config": null,
+  "deliveries": [
+    {
+      "delivery_id": "3d53b870-0c23-4e1b-b92f-15a0d9ebe65d",
+      "client_name": "Maker Center",
+      "coordinates": {
+        "latitude": 21.94482070439471,
+        "longitude": -102.32883559324756
+      },
+      "status": "delivered",
+      "note": "",
+      "reason": "",
+      "created_at": "2026-04-29T12:54:29.969925-06:00",
+      "updated_at": "2026-04-29T12:57:03.553199-06:00",
+      "completed_at": "2026-04-29T12:57:03.553199-06:00",
+      "sequence_hint": null
+    },
+    {
+      "delivery_id": "fbe2076e-7948-4084-a017-2de11fb54ef7",
+      "client_name": "P V",
+      "coordinates": {
+        "latitude": 21.961902567812366,
+        "longitude": -102.26867348309571
+      },
+      "status": "delivered",
+      "note": "",
+      "reason": "",
+      "created_at": "2026-04-29T12:55:22.068466-06:00",
+      "updated_at": "2026-04-29T12:57:16.384988-06:00",
+      "completed_at": "2026-04-29T12:57:16.384988-06:00",
+      "sequence_hint": null
+    }
+  ]
+}
