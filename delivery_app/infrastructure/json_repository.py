@@ -191,10 +191,10 @@ class JsonTripRepository(TripRepositoryBase):
                         "display_title": s.get("display_title", s.get("title", f"Viaje {f.stem}")),
                         "trip_date": f.stem,
                         "status": "closed",
-                        "completed": s.get("completed", 0),
-                        "pending": s.get("pending", 0),
-                        "planned_km": s.get("total_km", 0.0),
-                        "estimated_fuel_cost": s.get("fuel_cost", 0.0),
+                        "completed": s.get("completed") or 0,
+                        "pending": s.get("pending") or 0,
+                        "planned_km": s.get("total_km") or 0.0,
+                        "estimated_fuel_cost": f"{s.get('fuel_cost') or 0.0:.2f}",
                     })
             except (json.JSONDecodeError, ValueError, Exception):
                 continue

@@ -1,0 +1,30 @@
+{
+  "trip_id": "trip_123",
+  "exported_at": "2026-05-04T11:07:23.108695-06:00",
+  "format": "deliveries",
+  "data": {
+    "total": 2,
+    "deliveries": [
+      {
+        "delivery_id": "d1",
+        "client_name": "Client 1",
+        "latitude": 1.0,
+        "longitude": 1.0,
+        "status": "delivered",
+        "note": null,
+        "reason": null,
+        "completed_at": "2026-05-04T11:07:23.108152"
+      },
+      {
+        "delivery_id": "d2",
+        "client_name": "Client 2",
+        "latitude": 2.0,
+        "longitude": 2.0,
+        "status": "pending",
+        "note": null,
+        "reason": null,
+        "completed_at": null
+      }
+    ]
+  }
+}

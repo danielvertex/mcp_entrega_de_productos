@@ -1,0 +1,96 @@
+{
+  "trip_id": "e5d76bf5-4149-404d-ace5-6d4347923f65",
+  "exported_at": "2026-05-04T10:25:41.392816-06:00",
+  "format": "full",
+  "data": {
+    "trip_id": "e5d76bf5-4149-404d-ace5-6d4347923f65",
+    "driver_id": null,
+    "created_at": "2026-04-27T20:29:53.179524Z",
+    "closed_at": "2026-04-27T20:33:16.763541Z",
+    "status": "closed",
+    "origin": {
+      "name": "B&G HQ",
+      "coordinates": {
+        "latitude": 21.866201518501583,
+        "longitude": -102.29903813195544
+      }
+    },
+    "return_mode": "origin",
+    "return_point": null,
+    "current_location": null,
+    "route_plan": {
+      "optimized_order": [
+        "eff2e013-4d3d-4493-9164-c29fe9056f4e",
+        "245c7881-2cab-417b-826a-4db88d0e1f43",
+        "68e1bdc1-308e-4f64-905a-8b82c4a779a5"
+      ],
+      "total_distance_km": 29.7,
+      "total_duration_min": 36.24,
+      "method": "osrm",
+      "return_info": {
+        "mode": "origin",
+        "point_name": "B&G HQ",
+        "latitude": 21.866201518501583,
+        "longitude": -102.29903813195544
+      }
+    },
+    "metrics": {
+      "planned_km": 29.7,
+      "actual_km": null,
+      "planned_duration_min": 36.24,
+      "estimated_fuel_liters": 2.7,
+      "estimated_fuel_cost": 79.65
+    },
+    "fuel_config": {
+      "km_per_liter": 11.0,
+      "fuel_price": 29.5
+    },
+    "deliveries": [
+      {
+        "delivery_id": "eff2e013-4d3d-4493-9164-c29fe9056f4e",
+        "client_name": "Lejos",
+        "coordinates": {
+          "latitude": 21.95777689448865,
+          "longitude": -102.33676845281039
+        },
+        "status": "pending",
+        "note": null,
+        "reason": null,
+        "created_at": "2026-04-27T20:30:12.073941Z",
+        "updated_at": "2026-04-27T20:30:12.073946Z",
+        "completed_at": null,
+        "sequence_hint": null
+      },
+      {
+        "delivery_id": "245c7881-2cab-417b-826a-4db88d0e1f43",
+        "client_name": "Mediano",
+        "coordinates": {
+          "latitude": 21.89530495642737,
+          "longitude": -102.28024791337613
+        },
+        "status": "pending",
+        "note": null,
+        "reason": null,
+        "created_at": "2026-04-27T20:30:36.225194Z",
+        "updated_at": "2026-04-27T20:30:36.225197Z",
+        "completed_at": null,
+        "sequence_hint": null
+      },
+      {
+        "delivery_id": "68e1bdc1-308e-4f64-905a-8b82c4a779a5",
+        "client_name": "Cerca",
+        "coordinates": {
+          "latitude": 21.87838374227772,
+          "longitude": -102.28179775017676
+        },
+        "status": "pending",
+        "note": null,
+        "reason": null,
+        "created_at": "2026-04-27T20:30:54.533281Z",
+        "updated_at": "2026-04-27T20:30:54.533284Z",
+        "completed_at": null,
+        "sequence_hint": null
+      }
+    ]
+  }
+}

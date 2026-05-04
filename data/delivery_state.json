@@ -1,45 +1,43 @@
 {
-  "trip_id": "e08bd23f-6e8e-4fb9-b0bb-2391f44af794",
+  "trip_id": "c4ec75b8-3e00-4d4c-b86d-d5660fbdbda1",
   "driver_id": null,
-  "created_at": "2026-04-29T14:07:43.276275-06:00",
+  "created_at": "2026-05-04T11:10:51.042502-06:00",
   "closed_at": null,
   "status": "active",
   "origin": {
     "name": "B&G",
     "coordinates": {
-      "latitude": 21.866496381311467,
-      "longitude": -102.29912778218741
+      "latitude": 21.866546931527058,
+      "longitude": -102.29907085020197
     }
   },
   "return_mode": "origin",
   "return_point": null,
   "current_location": {
-    "latitude": 21.841094930171217,
-    "longitude": -102.32350171328352
+    "latitude": 21.856871905421766,
+    "longitude": -102.26496668708529
   },
   "route_plan": {
     "optimized_order": [
-      "cdee85fd-e58d-4296-8ab7-21c3a0600996",
-      "492d1858-5d75-4fc2-a99f-4f417cb24828",
-      "f4119407-fcd9-4566-aba0-95f408865cd8",
-      "1df174ba-622b-45fe-9a33-9312b1e004b9"
+      "8987d363-d530-4625-908d-63a3ae354f48",
+      "511e04fd-5ea7-43b8-aaf7-f63913e1fb5b"
     ],
-    "total_distance_km": 45.32,
-    "total_duration_min": 49.45,
+    "total_distance_km": 14.05,
+    "total_duration_min": 17.48,
     "method": "osrm",
     "return_info": {
       "mode": "origin",
       "point_name": "B&G",
-      "latitude": 21.866496381311467,
-      "longitude": -102.29912778218741
+      "latitude": 21.866546931527058,
+      "longitude": -102.29907085020197
     }
   },
   "metrics": {
-    "planned_km": 45.32,
+    "planned_km": 14.05,
     "actual_km": null,
-    "planned_duration_min": 49.45,
-    "estimated_fuel_liters": 4.12,
-    "estimated_fuel_cost": 122.78
+    "planned_duration_min": 17.48,
+    "estimated_fuel_liters": 1.28,
+    "estimated_fuel_cost": 38.06
   },
   "fuel_config": {
     "km_per_liter": 11.0,
@@ -47,63 +45,33 @@
   },
   "deliveries": [
     {
-      "delivery_id": "f4119407-fcd9-4566-aba0-95f408865cd8",
-      "client_name": "Panamericana",
+      "delivery_id": "511e04fd-5ea7-43b8-aaf7-f63913e1fb5b",
+      "client_name": "Hospital de la mujer",
       "coordinates": {
-        "latitude": 21.825979297819625,
-        "longitude": -102.28270583776197
+        "latitude": 21.858018137440425,
+        "longitude": -102.25286249767078
       },
       "status": "delivered",
       "note": "",
       "reason": "",
-      "created_at": "2026-04-29T14:08:03.855454-06:00",
-      "updated_at": "2026-04-29T14:11:49.680713-06:00",
-      "completed_at": "2026-04-29T14:11:49.680713-06:00",
+      "created_at": "2026-05-04T11:11:16.838954-06:00",
+      "updated_at": "2026-05-04T11:11:56.716013-06:00",
+      "completed_at": "2026-05-04T11:11:56.716013-06:00",
       "sequence_hint": null
     },
     {
-      "delivery_id": "1df174ba-622b-45fe-9a33-9312b1e004b9",
-      "client_name": "Sams Santa Monica",
+      "delivery_id": "8987d363-d530-4625-908d-63a3ae354f48",
+      "client_name": "Morelos 1",
       "coordinates": {
-        "latitude": 21.841094930171217,
-        "longitude": -102.32350171328352
+        "latitude": 21.856871905421766,
+        "longitude": -102.26496668708529
       },
       "status": "delivered",
       "note": "",
       "reason": "",
-      "created_at": "2026-04-29T14:08:32.983981-06:00",
-      "updated_at": "2026-04-29T14:12:30.467220-06:00",
-      "completed_at": "2026-04-29T14:12:30.467220-06:00",
-      "sequence_hint": null
-    },
-    {
-      "delivery_id": "492d1858-5d75-4fc2-a99f-4f417cb24828",
-      "client_name": "San Marcos",
-      "coordinates": {
-        "latitude": 21.878821783312773,
-        "longitude": -102.30695677748811
-      },
-      "status": "delivered",
-      "note": "",
-      "reason": "",
-      "created_at": "2026-04-29T14:09:02.542482-06:00",
-      "updated_at": "2026-04-29T14:12:19.978059-06:00",
-      "completed_at": "2026-04-29T14:12:19.978059-06:00",
-      "sequence_hint": null
-    },
-    {
-      "delivery_id": "cdee85fd-e58d-4296-8ab7-21c3a0600996",
-      "client_name": "Jesus Maria",
-      "coordinates": {
-        "latitude": 21.960947292582524,
-        "longitude": -102.34657797402018
-      },
-      "status": "delivered",
-      "note": "",
-      "reason": "",
-      "created_at": "2026-04-29T14:09:24.171109-06:00",
-      "updated_at": "2026-04-29T14:12:10.091901-06:00",
-      "completed_at": "2026-04-29T14:12:10.091901-06:00",
+      "created_at": "2026-05-04T11:11:38.391251-06:00",
+      "updated_at": "2026-05-04T11:11:58.821059-06:00",
+      "completed_at": "2026-05-04T11:11:58.821059-06:00",
       "sequence_hint": null
     }
   ]

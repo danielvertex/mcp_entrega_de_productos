@@ -1,0 +1,22 @@
+{
+  "trip_id": "trip_123",
+  "exported_at": "2026-05-04T11:07:23.090692-06:00",
+  "format": "summary",
+  "data": {
+    "trip_id": "trip_123",
+    "display_title": "04/05 | Base ➡ Client 2",
+    "status": "closed",
+    "total": 2,
+    "completed": 1,
+    "pending": 1,
+    "failed": 0,
+    "rescheduled": 0,
+    "planned_km": 0.0,
+    "planned_duration_min": 0.0,
+    "estimated_fuel_liters": 0.0,
+    "estimated_fuel_cost": 0.0,
+    "route_method": null,
+    "trip_date": "2026-05-04T11:07:23.090692",
+    "closed_at": "2026-05-04T11:07:23.090692"
+  }
+}

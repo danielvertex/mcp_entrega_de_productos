@@ -28,6 +28,7 @@ from delivery_app.services.routing_service import RoutingService
 from delivery_app.services.trip_service import TripService
 from delivery_app.tools.config_tools import register_config_tools
 from delivery_app.tools.delivery_tools import register_delivery_tools
+from delivery_app.tools.history_tools import register_history_tools
 from delivery_app.tools.route_tools import register_route_tools
 from delivery_app.tools.trip_tools import register_trip_tools
 from delivery_app.ui.app_builder import (
@@ -61,6 +62,7 @@ register_delivery_tools(app, trip_service)
 register_config_tools(app, trip_service)
 register_route_tools(app, trip_service, routing_service)
 register_trip_tools(app, trip_service)
+register_history_tools(app, trip_service)
 
 # ─── 3. Constructor de Interfaz Gráfica (UI) ──────────────────
 

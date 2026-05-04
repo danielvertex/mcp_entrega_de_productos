@@ -1,0 +1,38 @@
+{
+  "trip_id": "f38f090c-19ab-4a80-b22d-7fbf68125636",
+  "exported_at": "2026-05-04T10:34:07.382828-06:00",
+  "format": "full",
+  "data": {
+    "trip_id": "f38f090c-19ab-4a80-b22d-7fbf68125636",
+    "driver_id": null,
+    "created_at": "2026-05-04T10:32:10.019201-06:00",
+    "closed_at": "2026-05-04T10:34:01.542067-06:00",
+    "status": "closed",
+    "origin": {
+      "name": "B&G",
+      "coordinates": {
+        "latitude": 21.866412838538043,
+        "longitude": -102.29913414985121
+      }
+    },
+    "return_mode": "origin",
+    "return_point": null,
+    "current_location": {
+      "latitude": 21.9233611203915,
+      "longitude": -102.28977722111841
+    },
+    "route_plan": null,
+    "metrics": {
+      "planned_km": 0.0,
+      "actual_km": null,
+      "planned_duration_min": 0.0,
+      "estimated_fuel_liters": 0.0,
+      "estimated_fuel_cost": 0.0
+    },
+    "fuel_config": {
+      "km_per_liter": 11.0,
+      "fuel_price": 29.8
+    },
+    "deliveries": []
+  }
+}

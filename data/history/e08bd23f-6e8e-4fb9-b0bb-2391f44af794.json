@@ -1,0 +1,110 @@
+{
+  "trip_id": "e08bd23f-6e8e-4fb9-b0bb-2391f44af794",
+  "driver_id": null,
+  "created_at": "2026-04-29T14:07:43.276275-06:00",
+  "closed_at": "2026-05-04T10:13:20.242356-06:00",
+  "status": "closed",
+  "origin": {
+    "name": "B&G",
+    "coordinates": {
+      "latitude": 21.866496381311467,
+      "longitude": -102.29912778218741
+    }
+  },
+  "return_mode": "origin",
+  "return_point": null,
+  "current_location": {
+    "latitude": 21.841094930171217,
+    "longitude": -102.32350171328352
+  },
+  "route_plan": {
+    "optimized_order": [
+      "cdee85fd-e58d-4296-8ab7-21c3a0600996",
+      "492d1858-5d75-4fc2-a99f-4f417cb24828",
+      "f4119407-fcd9-4566-aba0-95f408865cd8",
+      "1df174ba-622b-45fe-9a33-9312b1e004b9"
+    ],
+    "total_distance_km": 45.32,
+    "total_duration_min": 49.45,
+    "method": "osrm",
+    "return_info": {
+      "mode": "origin",
+      "point_name": "B&G",
+      "latitude": 21.866496381311467,
+      "longitude": -102.29912778218741
+    }
+  },
+  "metrics": {
+    "planned_km": 45.32,
+    "actual_km": null,
+    "planned_duration_min": 49.45,
+    "estimated_fuel_liters": 4.12,
+    "estimated_fuel_cost": 122.78
+  },
+  "fuel_config": {
+    "km_per_liter": 11.0,
+    "fuel_price": 29.8
+  },
+  "deliveries": [
+    {
+      "delivery_id": "f4119407-fcd9-4566-aba0-95f408865cd8",
+      "client_name": "Panamericana",
+      "coordinates": {
+        "latitude": 21.825979297819625,
+        "longitude": -102.28270583776197
+      },
+      "status": "delivered",
+      "note": "",
+      "reason": "",
+      "created_at": "2026-04-29T14:08:03.855454-06:00",
+      "updated_at": "2026-04-29T14:11:49.680713-06:00",
+      "completed_at": "2026-04-29T14:11:49.680713-06:00",
+      "sequence_hint": null
+    },
+    {
+      "delivery_id": "1df174ba-622b-45fe-9a33-9312b1e004b9",
+      "client_name": "Sams Santa Monica",
+      "coordinates": {
+        "latitude": 21.841094930171217,
+        "longitude": -102.32350171328352
+      },
+      "status": "delivered",
+      "note": "",
+      "reason": "",
+      "created_at": "2026-04-29T14:08:32.983981-06:00",
+      "updated_at": "2026-04-29T14:12:30.467220-06:00",
+      "completed_at": "2026-04-29T14:12:30.467220-06:00",
+      "sequence_hint": null
+    },
+    {
+      "delivery_id": "492d1858-5d75-4fc2-a99f-4f417cb24828",
+      "client_name": "San Marcos",
+      "coordinates": {
+        "latitude": 21.878821783312773,
+        "longitude": -102.30695677748811
+      },
+      "status": "delivered",
+      "note": "",
+      "reason": "",
+      "created_at": "2026-04-29T14:09:02.542482-06:00",
+      "updated_at": "2026-04-29T14:12:19.978059-06:00",
+      "completed_at": "2026-04-29T14:12:19.978059-06:00",
+      "sequence_hint": null
+    },
+    {
+      "delivery_id": "cdee85fd-e58d-4296-8ab7-21c3a0600996",
+      "client_name": "Jesus Maria",
+      "coordinates": {
+        "latitude": 21.960947292582524,
+        "longitude": -102.34657797402018
+      },
+      "status": "delivered",
+      "note": "",
+      "reason": "",
+      "created_at": "2026-04-29T14:09:24.171109-06:00",
+      "updated_at": "2026-04-29T14:12:10.091901-06:00",
+      "completed_at": "2026-04-29T14:12:10.091901-06:00",
+      "sequence_hint": null
+    }
+  ]
+}

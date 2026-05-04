@@ -1,0 +1,94 @@
+{
+  "trip_id": "dda438ab-57cf-47bb-846d-0c399743c8fb",
+  "driver_id": null,
+  "created_at": "2026-05-04T10:45:52.302401-06:00",
+  "closed_at": "2026-05-04T10:53:55.323904-06:00",
+  "status": "closed",
+  "origin": {
+    "name": "B&G",
+    "coordinates": {
+      "latitude": 21.86642321993154,
+      "longitude": -102.29902934037096
+    }
+  },
+  "return_mode": "origin",
+  "return_point": null,
+  "current_location": {
+    "latitude": 21.925531271337775,
+    "longitude": -102.2912875157662
+  },
+  "route_plan": {
+    "optimized_order": [
+      "3bb5c8b3-5628-43ad-9d55-288776dd93a6",
+      "15f47f1d-3cb5-4b37-abd0-6c34f28fbf9f",
+      "6b8766f9-ad60-4343-b5e9-aa292ad59785"
+    ],
+    "total_distance_km": 32.42,
+    "total_duration_min": 37.23,
+    "method": "osrm",
+    "return_info": {
+      "mode": "origin",
+      "point_name": "B&G",
+      "latitude": 21.86642321993154,
+      "longitude": -102.29902934037096
+    }
+  },
+  "metrics": {
+    "planned_km": 32.42,
+    "actual_km": null,
+    "planned_duration_min": 37.23,
+    "estimated_fuel_liters": 2.95,
+    "estimated_fuel_cost": 87.83
+  },
+  "fuel_config": {
+    "km_per_liter": 11.0,
+    "fuel_price": 29.8
+  },
+  "deliveries": [
+    {
+      "delivery_id": "6b8766f9-ad60-4343-b5e9-aa292ad59785",
+      "client_name": "Villas",
+      "coordinates": {
+        "latitude": 21.92985738967255,
+        "longitude": -102.25836139656376
+      },
+      "status": "delivered",
+      "note": "",
+      "reason": "",
+      "created_at": "2026-05-04T10:46:19.591688-06:00",
+      "updated_at": "2026-05-04T10:48:25.963267-06:00",
+      "completed_at": "2026-05-04T10:48:25.963267-06:00",
+      "sequence_hint": null
+    },
+    {
+      "delivery_id": "3bb5c8b3-5628-43ad-9d55-288776dd93a6",
+      "client_name": "Morelos",
+      "coordinates": {
+        "latitude": 21.85751516032723,
+        "longitude": -102.26185474754689
+      },
+      "status": "delivered",
+      "note": "",
+      "reason": "",
+      "created_at": "2026-05-04T10:47:11.423048-06:00",
+      "updated_at": "2026-05-04T10:52:40.891941-06:00",
+      "completed_at": "2026-05-04T10:52:40.891941-06:00",
+      "sequence_hint": null
+    },
+    {
+      "delivery_id": "15f47f1d-3cb5-4b37-abd0-6c34f28fbf9f",
+      "client_name": "Altaria",
+      "coordinates": {
+        "latitude": 21.925531271337775,
+        "longitude": -102.2912875157662
+      },
+      "status": "delivered",
+      "note": "",
+      "reason": "",
+      "created_at": "2026-05-04T10:47:51.934800-06:00",
+      "updated_at": "2026-05-04T10:52:42.894789-06:00",
+      "completed_at": "2026-05-04T10:52:42.894789-06:00",
+      "sequence_hint": null
+    }
+  ]
+}

@@ -200,6 +200,24 @@ def update_route_plan(trip: Trip, route_result: RouteResult) -> Trip:
     )
 
 
+def update_fuel_config(trip: Trip, fuel_config: FuelConfig) -> Trip:
+    """Actualiza la configuración de combustible y recalcula los costos si hay ruta."""
+    updated_trip = trip.model_copy(update={"fuel_config": fuel_config})
+    
+    if updated_trip.route_plan and updated_trip.route_plan.total_distance_km > 0:
+        liters = updated_trip.route_plan.total_distance_km / fuel_config.km_per_liter
+        cost = liters * fuel_config.fuel_price
+        metrics_update = updated_trip.metrics.model_copy(
+            update={
+                "estimated_fuel_liters": round(liters, 2),
+                "estimated_fuel_cost": round(cost, 2),
+            }
+        )
+        updated_trip = updated_trip.model_copy(update={"metrics": metrics_update})
+        
+    return updated_trip
+
+
 def close_day(trip: Trip) -> Trip:
     """Cierra la jornada de forma idempotente.
 
@@ -287,7 +305,7 @@ def get_summary(trip: Trip) -> dict:
         "planned_km": trip.metrics.planned_km,
         "planned_duration_min": trip.metrics.planned_duration_min,
         "estimated_fuel_liters": trip.metrics.estimated_fuel_liters,
-        "estimated_fuel_cost": trip.metrics.estimated_fuel_cost,
+        "estimated_fuel_cost": f"{trip.metrics.estimated_fuel_cost:.2f}",
         "route_method": (
             trip.route_plan.method.value if trip.route_plan else None
         ),

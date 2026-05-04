@@ -136,7 +136,7 @@ class TripService:
         self, trip: Trip, fuel_config: FuelConfig
     ) -> Trip:
         """Actualiza la configuración de combustible y persiste."""
-        updated = trip.model_copy(update={"fuel_config": fuel_config})
+        updated = trip_manager.update_fuel_config(trip, fuel_config)
         self._repo.save_trip(updated)
         return updated
 

@@ -1,0 +1,94 @@
+{
+  "trip_id": "d5209682-0ebd-4002-ae48-90863c670eb7",
+  "driver_id": null,
+  "created_at": "2026-05-04T10:59:31.778726-06:00",
+  "closed_at": "2026-05-04T11:10:10.462004-06:00",
+  "status": "closed",
+  "origin": {
+    "name": "B&G",
+    "coordinates": {
+      "latitude": 21.866443860597062,
+      "longitude": -102.29917382005792
+    }
+  },
+  "return_mode": "origin",
+  "return_point": null,
+  "current_location": {
+    "latitude": 21.866167717240188,
+    "longitude": -102.29353982354009
+  },
+  "route_plan": {
+    "optimized_order": [
+      "2db5b477-630f-4c48-af9d-30b18b5764f4",
+      "47061a28-84e9-4407-9b35-7cd13b6bde88",
+      "2c3b5e40-946b-4fe0-b752-d51406b535c4"
+    ],
+    "total_distance_km": 15.32,
+    "total_duration_min": 21.75,
+    "method": "osrm",
+    "return_info": {
+      "mode": "origin",
+      "point_name": "B&G",
+      "latitude": 21.866443860597062,
+      "longitude": -102.29917382005792
+    }
+  },
+  "metrics": {
+    "planned_km": 15.32,
+    "actual_km": null,
+    "planned_duration_min": 21.75,
+    "estimated_fuel_liters": 1.39,
+    "estimated_fuel_cost": 41.5
+  },
+  "fuel_config": {
+    "km_per_liter": 11.0,
+    "fuel_price": 29.8
+  },
+  "deliveries": [
+    {
+      "delivery_id": "2db5b477-630f-4c48-af9d-30b18b5764f4",
+      "client_name": "Velaria Mall",
+      "coordinates": {
+        "latitude": 21.86007785491371,
+        "longitude": -102.31475446314437
+      },
+      "status": "delivered",
+      "note": "",
+      "reason": "",
+      "created_at": "2026-05-04T11:00:21.322781-06:00",
+      "updated_at": "2026-05-04T11:03:21.542590-06:00",
+      "completed_at": "2026-05-04T11:03:21.542590-06:00",
+      "sequence_hint": null
+    },
+    {
+      "delivery_id": "47061a28-84e9-4407-9b35-7cd13b6bde88",
+      "client_name": "Morelos 2",
+      "coordinates": {
+        "latitude": 21.851180824017028,
+        "longitude": -102.26126113234632
+      },
+      "status": "delivered",
+      "note": "",
+      "reason": "",
+      "created_at": "2026-05-04T11:00:59.732474-06:00",
+      "updated_at": "2026-05-04T11:03:30.233050-06:00",
+      "completed_at": "2026-05-04T11:03:30.233050-06:00",
+      "sequence_hint": null
+    },
+    {
+      "delivery_id": "2c3b5e40-946b-4fe0-b752-d51406b535c4",
+      "client_name": "IMMS 1",
+      "coordinates": {
+        "latitude": 21.866167717240188,
+        "longitude": -102.29353982354009
+      },
+      "status": "delivered",
+      "note": "",
+      "reason": "",
+      "created_at": "2026-05-04T11:01:41.861364-06:00",
+      "updated_at": "2026-05-04T11:03:38.368858-06:00",
+      "completed_at": "2026-05-04T11:03:38.368858-06:00",
+      "sequence_hint": null
+    }
+  ]
+}

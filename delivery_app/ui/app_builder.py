@@ -50,6 +50,7 @@ TOOL_ORIGIN = "update_origin"
 TOOL_RETURN = "update_return_config"
 TOOL_FUEL = "update_fuel_config"
 TOOL_CLOSE_DAY = "close_day"
+TOOL_EXPORT = "export_route"
 
 PAGE_DASHBOARD = "dashboard"
 PAGE_ADD_POINT = "add_point"
@@ -343,8 +344,20 @@ class UIBuilder:
                 with CardContent():
                     Heading(trip.display_title, level=4, css_class="mb-2")
                     with Row(gap=2):
-                        Badge("{{ trip.completed }} entregas", variant="success")
-                        Badge("${{ trip.estimated_fuel_cost }}", variant="outline")
+                        Badge(f"{trip.completed} entregas", variant="success")
+                        Badge(f"${trip.estimated_fuel_cost}", variant="outline")
+                with CardFooter():
+                    Button(
+                        "📥 Exportar",
+                        size="sm",
+                        variant="outline",
+                        on_click=CallTool(
+                            TOOL_EXPORT,
+                            arguments={"trip_id": trip.trip_id, "format": "full"},
+                            on_success=ShowToast("Guardado en data/exports/", variant="success"),
+                            on_error=ShowToast("{{ $error }}", variant="error")
+                        )
+                    )
         back_button()
 
     def _build_return(self) -> None:
