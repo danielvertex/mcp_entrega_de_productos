@@ -1,4 +1,4 @@
-# Python-generated files
+# Python
 __pycache__/
 *.py[oc]
 build/
@@ -8,3 +8,25 @@ wheels/
 
 # Virtual environments
 .venv
+
+# Datos locales (no versionar estado de la app)
+data/
+*.json.corrupt.bak
+*.json.v1.bak
+
+# Archivos de debugging / scratch
+dump.json
+output.json
+scratch.py
+
+# Variables de entorno
+.env
+.env.*
+*.local
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store

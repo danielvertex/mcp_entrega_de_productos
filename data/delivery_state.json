@@ -1,78 +1,41 @@
 {
-  "trip_id": "c4ec75b8-3e00-4d4c-b86d-d5660fbdbda1",
-  "driver_id": null,
-  "created_at": "2026-05-04T11:10:51.042502-06:00",
-  "closed_at": null,
-  "status": "active",
   "origin": {
-    "name": "B&G",
-    "coordinates": {
-      "latitude": 21.866546931527058,
-      "longitude": -102.29907085020197
-    }
+    "name": "B&G HQ",
+    "latitude": 21.866409397596712,
+    "longitude": -102.2991742973498
   },
-  "return_mode": "origin",
-  "return_point": null,
-  "current_location": {
-    "latitude": 21.856871905421766,
-    "longitude": -102.26496668708529
-  },
-  "route_plan": {
-    "optimized_order": [
-      "8987d363-d530-4625-908d-63a3ae354f48",
-      "511e04fd-5ea7-43b8-aaf7-f63913e1fb5b"
-    ],
-    "total_distance_km": 14.05,
-    "total_duration_min": 17.48,
-    "method": "osrm",
+  "delivery_points": [],
+  "optimized_route": {
+    "optimized_order": [],
+    "total_distance_km": 0.0,
+    "total_duration_min": 0.0,
+    "method": "",
     "return_info": {
-      "mode": "origin",
-      "point_name": "B&G",
-      "latitude": 21.866546931527058,
-      "longitude": -102.29907085020197
+      "mode": "none",
+      "point_name": "",
+      "latitude": 0.0,
+      "longitude": 0.0
     }
   },
-  "metrics": {
-    "planned_km": 14.05,
-    "actual_km": null,
-    "planned_duration_min": 17.48,
-    "estimated_fuel_liters": 1.28,
-    "estimated_fuel_cost": 38.06
+  "return_config": {
+    "mode": "origin",
+    "custom_point": {
+      "name": "",
+      "latitude": 0.0,
+      "longitude": 0.0
+    }
   },
   "fuel_config": {
-    "km_per_liter": 11.0,
-    "fuel_price": 29.8
+    "km_per_liter": 5.0,
+    "price_per_liter": 29.5
   },
-  "deliveries": [
-    {
-      "delivery_id": "511e04fd-5ea7-43b8-aaf7-f63913e1fb5b",
-      "client_name": "Hospital de la mujer",
-      "coordinates": {
-        "latitude": 21.858018137440425,
-        "longitude": -102.25286249767078
-      },
-      "status": "delivered",
-      "note": "",
-      "reason": "",
-      "created_at": "2026-05-04T11:11:16.838954-06:00",
-      "updated_at": "2026-05-04T11:11:56.716013-06:00",
-      "completed_at": "2026-05-04T11:11:56.716013-06:00",
-      "sequence_hint": null
-    },
-    {
-      "delivery_id": "8987d363-d530-4625-908d-63a3ae354f48",
-      "client_name": "Morelos 1",
-      "coordinates": {
-        "latitude": 21.856871905421766,
-        "longitude": -102.26496668708529
-      },
-      "status": "delivered",
-      "note": "",
-      "reason": "",
-      "created_at": "2026-05-04T11:11:38.391251-06:00",
-      "updated_at": "2026-05-04T11:11:58.821059-06:00",
-      "completed_at": "2026-05-04T11:11:58.821059-06:00",
-      "sequence_hint": null
-    }
-  ]
+  "summary": {
+    "completed": 0,
+    "pending": 0,
+    "total_km": 0.0,
+    "total_duration_min": 0.0,
+    "fuel_liters": 0.0,
+    "fuel_cost": 0.0,
+    "optimized_order": []
+  }
 }
